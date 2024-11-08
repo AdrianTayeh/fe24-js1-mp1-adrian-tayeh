@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.radObj {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #6e6ef7;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    border: 2px solid black;
+    padding: 10%;
+}
+
+.divRows { 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 5px solid #a8a8f0;
+    margin: 0 10px;;
+    width: 50px;
+}
+
+.divChild {
+    width: 100%;
+}
