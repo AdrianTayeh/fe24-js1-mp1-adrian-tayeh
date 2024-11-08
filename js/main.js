@@ -13,8 +13,7 @@ for(let i = 0; i < radObj.length; i++){
 const containerObj = document.createElement(`div`);
 containerObj.classList.add("container");
 document.body.appendChild(containerObj);
-const arrOne = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-const arrTwo= ["ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio", "tio"];
+const arrOne= ["ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio", "tio"];
 
 
 for(let i = 0; i < 3; i++){
@@ -24,39 +23,44 @@ for(let i = 0; i < 3; i++){
     for(let j = 0; j < arrOne.length; j++) {
         divChild = document.createElement(`div`);
         divChild.classList.add("divChild");
-        switch(i){
-            case 0:
-                divChild.innerText = arrOne[j];
-                divEl.style.textAlign= "start";
-                break;
-            case 1:
-                divChild.innerText = arrOne[arrOne.length - 1 - j];
-                divEl.style.textAlign= "center";
-                break;
-            case 2:
-                divChild.innerText = arrTwo[j];
-                divEl.style.textAlign= "end";
-                break;
-        }
-        if(i == 1){
-            if(j%2 == 0){
-                divChild.style.backgroundColor = "white";
-            }
-            else {
+
+        if(i == 1 ){
+            if(j%2 == 1){
                 divChild.style.backgroundColor = "black";
-                divChild.style.color = "white";
-            }
+                divChild.style.color = "white";            }
         }
         else {
             if(j%2 == 0){
                 divChild.style.backgroundColor = "black";
                 divChild.style.color = "white";
             }
-            else {
-                divChild.style.backgroundColor = "white";
-            }
         }
+        switch(i){
+            case 0:
+                divChild.innerText = 0+j;
+                if(j ==  4){
+                    divChild.style.backgroundColor = "#a8a8f0";
+                }
+                divEl.style.textAlign= "start";
+                break;
+            case 1:
+                divChild.innerText = 9-j;
+                if(j == 1) {
+                    divChild.style.backgroundColor = "#a8a8f0";
+                }
+                divEl.style.textAlign= "center";
+                break;
+            case 2:
+                divChild.innerText = arrOne[j];
+                if(j == 5) {
+                    divChild.style.backgroundColor = "#a8a8f0";
+                }
+                divEl.style.textAlign= "end";
+                break;
+        }
+        
         
         divEl.appendChild(divChild);
     }
 }
+
